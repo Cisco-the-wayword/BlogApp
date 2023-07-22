@@ -74,7 +74,6 @@ This project does not require additional dependencies, just Ruby interpreter. Ho
 
 ```sh
 bundle install
-npm install
 ```
 
 ### Usage
@@ -82,6 +81,8 @@ npm install
 To run the project, navigate to the project directory and execute the following command:
 
 ```sh
+  rails db:create
+  rails db:migrate
   rails s
 ```
 
