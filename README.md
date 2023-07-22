@@ -25,7 +25,7 @@
 
 # 📖 Blog App <a name="about-project">Blog Here</a>
 
-**Blog Here** In this project, I use migration files to build the schema.
+**Blog Here** The Blog app will be a classic example of a blog website. I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## 🛠 Built With <a name="built-with"></a>
 Ruby on Rails
