@@ -17,6 +17,8 @@ development:
 test:
   <<: *default
   database: blogApp_test
+  username: postgres
+  password: Rashida@1987
 
 production:
   <<: *default
