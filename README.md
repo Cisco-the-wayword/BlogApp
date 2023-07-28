@@ -92,7 +92,7 @@ To run tests, run the following command:
 
 Run the following command
 ```sh
-rubocop
+rspec spec/
 ```
 
 ### Deployment
