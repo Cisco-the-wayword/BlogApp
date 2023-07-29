@@ -5,6 +5,9 @@
         <div class="user-data border">
           <h1><%= @user.name %></h1>
           <p class="number-posts">Number of posts: <%= @user.posts_counter %></p>
+          <div class="right">
+            <%= link_to "Add a post",new_user_post_path(@user), class: "btn right" %>
+          </div>
         </div>
       </div>
     </section>
@@ -12,8 +15,8 @@
       <ul>
         <% @posts.each do |post| %>
           <%= link_to user_post_path(user_id: post.author_id, id: post.id) do %>
-            <li class="card hover flexColumn">
-              <div class="card flexColumn">
+          <li class="card hover">
+            <div class="card">
                 <h2><%= post.title %></h2>
                 <p><%= post.text %></p>
                 <div class="right">
