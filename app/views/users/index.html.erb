@@ -5,7 +5,7 @@
         <%= link_to user do %>
           <li class="card hover">
             <div class="user-image border">
-              <%= image_tag user.photo.url %> <!-- Assuming the user.photo.url holds the URL of the user's photo -->
+          <img class = "user_image" src=<%= user.photo %> alt="user image" /> <!-- Assuming the user.photo.url holds the URL of the user's photo -->
             </div>
             <div class="user-data border">
               <h1><%= user.name %></h1>
