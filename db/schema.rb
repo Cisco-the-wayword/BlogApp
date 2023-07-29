@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_12_045045) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_20_143635) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -36,8 +36,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_12_045045) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "text"
-    t.integer "comments_counter"
-    t.integer "likes_counter"
+    t.integer "comments_counter", default: 0
+    t.integer "likes_counter", default: 0
     t.timestamps
     t.references :author, foreign_key: { to_table: 'users' }
   end
