@@ -54,6 +54,9 @@ a {
 .card {
   display: flex;
   padding: 10px;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
   margin: 10px 0;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
   transition: 0.4s;
@@ -74,6 +77,7 @@ a {
 
 .user-image {
   flex: 20%;
+  height: 13rem;
 }
 
 .user-data {
@@ -97,10 +101,24 @@ a {
   cursor: pointer;
   background-color: white;
   border: 1px solid #2d2d2d;
+  max-width: 100px;
+  margin-left: 15px;
   box-shadow: 3px 5px;
   padding: 0.25rem 0.5rem;
 }
 
 .comments-container {
   padding: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+.button_field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
