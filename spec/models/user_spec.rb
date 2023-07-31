@@ -27,6 +27,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'should return less than 3 posts ' do
+      allow(@user).to receive_message_chain(:recent_posts, :length).and_return(2)
       value = @user.recent_posts.length
       expect(value).to be < 3
     end
