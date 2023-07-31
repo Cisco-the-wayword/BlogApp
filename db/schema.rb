@@ -38,7 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_20_143635) do
     t.text "text"
     t.integer "comments_counter", default: 0
     t.integer "likes_counter", default: 0
-    t.timestamps
+    t.bigint "author_id", null: false
     t.references :author, foreign_key: { to_table: 'users' }
   end
 
@@ -46,7 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_20_143635) do
     t.string "name"
     t.string "photo"
     t.text "bio"
-    t.integer "posts_counter"
+    t.integer "posts_counter", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -55,4 +55,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_20_143635) do
   add_foreign_key "comments", "users", column: "author_id"
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users", column: "author_id"
+  add_foreign_key "posts", "users", column: "author_id"
 end
