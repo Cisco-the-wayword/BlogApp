@@ -9,7 +9,7 @@ RSpec.describe User, type: :system do
     User.create(
       name: 'Tom Jenkins',
       photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqI5QUajL66Kkwz9efY-xCyC_Bq97XyTvgPmndMocETt62-ps3VjrzLtWNrDq_Y5qa5fQ',
-      bio: 'I\'m Tom, and I thrive on the thrill of innovation and creativity.',
+      bio: 'I\'m Tom, and I thrive on the thrill of innovation and creativity!',
       posts_counter: 0
     )
   end
