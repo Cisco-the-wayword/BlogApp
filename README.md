@@ -113,6 +113,12 @@ Not available at the moment.
 - Twitter: [@twitterhandle](https://twitter.com/the-wayword1)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/boluwatife-adegboyega/)
 
+👤 **Sameed Mohsin**
+
+- GitHub: [@sameedmohsin28](https://github.com/sameedmohsin28/)
+- Twitter: [@sameedmohsin22](https://twitter.com/SameedMohsin22)
+- LinkedIn: [Sameed Mohsin](https://www.linkedin.com/in/sameed-mohsin-538792180/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
