@@ -110,7 +110,7 @@ Not available at the moment.
 👤 **Adegboyega Boluwatife**
 
 - GitHub: [@githubhandle](https://github.com/Cisco-the-wayword)
-- Twitter: [@twitterhandle](https://twitter.com/the-wayword1)
+- Twitter: [@twitterhandle](https://twitter.com/the_wayword1)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/boluwatife-adegboyega/)
 
 👤 **Sameed Mohsin**
