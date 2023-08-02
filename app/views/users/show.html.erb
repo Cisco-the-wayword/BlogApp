@@ -1,7 +1,11 @@
 <main>
     <section>
       <div class="card">
-      <%= image_tag(@user.photo, class: "user-image border") %>
+    <% if @user.photo.present? %>
+    <%= image_tag(user.photo, class: "user-image border") %>
+  <% else %>
+    <!-- Provide a placeholder image or default image here if 'user.photo' is nil -->
+  <% end %>
         <div class="user-data border">
           <h1><%= @user.name %></h1>
         <p class="number-posts"><%= @user.posts_counter %> Posts</p>
