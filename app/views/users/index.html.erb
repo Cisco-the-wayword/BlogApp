@@ -1,19 +1,22 @@
 <main>
   <section>
     <ul>
-      <% @users.each do |user| %>
-        <%= link_to user_path(user) do %>
-          <li class="card hover">
+    <% @users.each do |user| %>
+      <%= link_to user_path(user) do %>
+        <li class="card hover">
+          <% if user.photo.present? %>
             <%= image_tag(user.photo, class: "user-image border") %>
-          <img class = "user_image" src=<%= user.photo %> alt="user image" /> <!-- Assuming the user.photo.url holds the URL of the user's photo -->
-            </div>
-              <p class="number-posts"><%= user.posts_counter %> Posts</p>
-              <h1><%= user.name %></h1>
-              <p class="number-posts">Number of posts: <%= user.posts_counter %></p>
-            </div>
-          </li>
-        <% end %>
+          <% else %>
+            <!-- Provide a placeholder image or default image here if 'user.photo' is nil -->
+          <% end %>
+          <div class="user-data border">
+            <h1><%= user.name %></h1>
+            <p class="number-posts"><%= user.posts_counter %> Posts</p>
+            <!-- Other user data and content -->
+          </div>
+        </li>
       <% end %>
+    <% end %>
     </ul>
   </section>
 </main>
