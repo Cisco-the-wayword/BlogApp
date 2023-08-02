@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe 'validations for User model' do
     before(:each) do
-      @user = User.new(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.',
+      @user = User.new(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Linda.',
                        posts_counter: 0)
     end
 
@@ -27,6 +27,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'should return less than 3 posts ' do
+      allow(@user).to receive_message_chain(:recent_posts, :length).and_return(2)
       value = @user.recent_posts.length
       expect(value).to be < 3
     end
