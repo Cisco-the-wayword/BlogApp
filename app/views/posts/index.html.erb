@@ -6,7 +6,9 @@
           <h1><%= @user.name %></h1>
         <p class="number-posts"><%= @user.posts_counter %> Posts</p>
           <div class="right">
-            <%= link_to "Add a post",new_user_post_path(@user), class: "btn right" %>
+        <% if current_user %>
+        <%= link_to "Add a post",new_user_post_path(@user), method: :get, class: "btn right" %>
+      <% end %>
           </div>
         </div>
       </div>
