@@ -6,6 +6,7 @@ class Api::V1::CommentsController < ApplicationController
     comments = post.comments
     render json: comments
   end
+
   def create
     token = request.headers['X-Token']
     user = User.find_by(api_token: token)
