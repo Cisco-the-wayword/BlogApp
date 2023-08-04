@@ -11,6 +11,8 @@ gem 'rails-controller-testing'
 
 gem 'devise'
 
+gem 'active_model_serializers', '~> 0.10.13'
+
 gem 'letter_opener'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
