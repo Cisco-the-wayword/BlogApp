@@ -1,5 +1,6 @@
 class Api::V1::CommentsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create], if: -> { request.format.json? }
+
   def index
     user = User.find(params['user_id'])
     post = user.posts.find(params['post_id'])
@@ -13,7 +14,7 @@ class Api::V1::CommentsController < ApplicationController
     post = Post.find(params['post_id'])
     new_comment = post.comments.new(
       text: params['text'],
-      user:
+      user: user  # Associate the comment with the user
     )
     new_comment.save
     render json: { success: 'Comment added successfully' }
