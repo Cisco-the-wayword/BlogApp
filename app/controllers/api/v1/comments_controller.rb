@@ -14,7 +14,7 @@ class Api::V1::CommentsController < ApplicationController
     post = Post.find(params['post_id'])
     new_comment = post.comments.new(
       text: params['text'],
-      user: user  # Associate the comment with the user
+      user: # Associate the comment with the user
     )
     new_comment.save
     render json: { success: 'Comment added successfully' }
