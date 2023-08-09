@@ -4,7 +4,7 @@
 #
 # This file is the source Rails uses to define your schema when running `bin/rails
 # db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
-# be faster and is potentially less error-prone than running all of your
+# be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
 #
@@ -39,7 +39,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_27_161525) do
     t.integer "comments_counter", default: 0
     t.integer "likes_counter", default: 0
     t.bigint "author_id", null: false
-    t.references :author, foreign_key: { to_table: 'users' }
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_posts_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|

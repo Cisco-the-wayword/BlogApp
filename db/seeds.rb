@@ -19,8 +19,8 @@ end
 end
 
 # Find, update, and delete entities
-user = User.find_by(name: 'Tom')
-puts "User: #{user.name}"
+# user = User.find_by(name: 'Tom')
+# puts "User: #{user.name}"
 user.update(name: 'Tom Smith')
 updated_user = User.find_by(name: 'Tom Smith')
 puts "Updated User: #{updated_user.name}"

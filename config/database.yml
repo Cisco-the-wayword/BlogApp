@@ -3,14 +3,14 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: postgres
-  password: CISCOPHRENZYa1
+  password: <%= ENV['BLOGAPP_DATABASE_PASSWORD'] %>
   host: localhost
 
 development:
   <<: *default
   database: blogApp
   username: postgres
-  password: CISCOPHRENZYa1
+  password: <%= ENV['BLOGAPP_DATABASE_PASSWORD'] %>
   host: localhost
   port: 5432
 
@@ -18,7 +18,7 @@ test:
   <<: *default
   database: blogApp_test
   username: postgres
-  password: Rashida@1987
+  password: <%= ENV['BLOGAPP_DATABASE_PASSWORD'] %>
 
 production:
   <<: *default
